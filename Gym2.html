@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laiba Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia:wght@300;400;700&display=swap">
+    <style>
+        /* CSS Reset */
+        body {
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sofia', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("pexels-photo-136394.webp") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .left img {
+            width: 80px;
+            height: auto;
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+
+        .left img:hover {
+            transform: scale(1.1);
+        }
+
+        .left div {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0f0;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: #0f0;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px; /* Reduced padding */
+            border: 2px solid gray;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px; /* Reduced font size */
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-block;
+            width: auto; /* Adjust width to fit content */
+        }
+
+        .btn:hover {
+            background-color: rgb(63, 138, 125);
+            transform: scale(1.05);
+        }
+
+        .container {
+            margin: 100px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #0f0;
+        }
+
+        .form.group {
+            margin-bottom: 15px;
+        }
+
+        .form.group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background: #f4f4f4;
+            color: #333;
+            font-style: italic;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .form.group input::placeholder {
+            color: #555;
+        }
+
+        .form.group input:focus {
+            outline: none;
+            border-color: #0f0;
+        }
+
+        .container button {
+            width: auto; /* Allow button to fit content */
+            margin: 20px auto;
+            align-self: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar li {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="download.jpeg" alt="Laiba Fitness Logo">
+            <div>Laiba Fitness</div>
+        </div>
+        <!-- mid box for navigation menu -->
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Centre</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- right box for buttons -->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the Best GYM in Karachi Now</h1>
+        <form action="no_action.php">
+            <div class="form group">
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form group">
+                <input type="number" name="age" placeholder="Enter your Age" required>
+            </div>
+            <div class="form group">
+                <input type="text" name="gender" placeholder="Enter your Gender" required>
+            </div>
+            <div class="form group">
+                <input type="text" name="locality" placeholder="Enter your Locality" required>
+            </div>
+            <div class="form group">
+                <input type="tel" name="contact" placeholder="Enter your Contact Number" required>
+            </div>
+            <div class="form group">
+                <input type="email" name="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="form group">
+                <input type="text" name="occupation" placeholder="Enter your Occupation" required>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
